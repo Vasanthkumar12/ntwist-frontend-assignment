@@ -30,6 +30,19 @@ body {
   font-size: 1rem; 
 }
 
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: blue;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
 .main-content {
   padding: 1rem;
   flex: 1;

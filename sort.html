@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User List</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    <h1>Sort html file</h1>
+     <div class="container">
+    <aside class="sidebar">
+      <h2>NTWIST</h2>
+      <ul class="nav-links">
+        <li><a href="index.html">Contact Form</a></li>
+        <li><a href="sort.html">Sorted List</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1>Submitted Users</h1>
+      <label for="sortOrder"><strong>Sort by:</strong></label>
+      <select id="sortOrder">
+        <option value="asc" selected>A - Z</option>
+        <option value="desc">Z - A</option>
+      </select>
+      <ul id="userList"></ul>
+    </main>
+  </div>
+
+  <script src="assets/js/sort.js"></script>
 </body>
 </html>

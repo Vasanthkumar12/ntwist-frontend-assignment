@@ -115,6 +115,29 @@ select {
   font-size: 1rem;
 }
 
+.animated-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(45deg, #006d00, #a8f622, #ef5b36, #6140e7);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradientShift 5s ease infinite;
+}
+
+@keyframes textGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* ========== Medium Devices (Tablets) ========== */
 @media (min-width: 600px) {
   html {

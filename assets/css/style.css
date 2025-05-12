@@ -1,0 +1,132 @@
+/* ========== Base styles (Mobile First Approach) ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 14px; 
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  font-size: 1rem; 
+}
+
+.main-content {
+  padding: 1rem;
+  flex: 1;
+  font-size: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+label {
+  font-size: 1rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+.required {
+    color: red;
+}
+
+#confirmation {
+    padding-top: 2rem;
+}
+
+#time-spent {
+    padding-top: 1rem;
+    padding-left: 1.8rem;
+}
+
+/* ========== Medium Devices (Tablets) ========== */
+@media (min-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  form {
+    max-width: 480px;
+  }
+}
+
+/* ========== Large Devices (Laptops) ========== */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    font-size: 1rem;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+}
+
+/* ========== XL Devices (Desktops) ========== */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+
+  .main-content {
+    padding: 2.5rem;
+  }
+}

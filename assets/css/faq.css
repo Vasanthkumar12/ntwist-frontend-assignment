@@ -1,30 +1,66 @@
+/* FAQ Styles - Simple and Clean Layout (No Outer Box) */
+
+/* ========== Base Styles ========== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9; /* Light background for a clean look */
+  color: #333;
+  padding: 2rem;
+  line-height: 1.6;
 }
 
+/* FAQ container */
 details {
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  background: transparent; /* No background color */
 }
 
+details:hover {
+  background-color: transparent; /* No background change on hover */
+}
+
+/* Summary - question title */
 summary {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: bold;
-  padding: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #ffffff; /* Solid blue background */
+  color: rgb(0, 0, 0);
+  user-select: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 summary:hover {
-  background-color: #e1e1e1;
+  background-color: #d8dcde; /* Darker blue on hover */
 }
 
-p {
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-top: none;
-  border-radius: 5px;
+/* Answer paragraph */
+details[open] p {
+  padding: 1rem;
+  background-color: #f0f9ff;
+  color: #333;
+  font-size: 0.95rem;
+  border-radius: 0 0 8px 8px;
+}
+
+/* ========== Media Queries ========== */
+@media (min-width: 600px) {
+  body { font-size: 16px; }
+}
+
+@media (min-width: 768px) {
+  body { font-size: 17px; }
+  summary {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body { font-size: 18px; }
+  details { margin-bottom: 2rem; }
+  summary { font-size: 1.3rem; }
 }

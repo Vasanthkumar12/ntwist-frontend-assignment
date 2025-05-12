@@ -10,11 +10,7 @@ function renderUsers(data) {
   data.forEach((user, index) => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <strong>${index + 1}. ${user.name}</strong><br/>
-      Email: ${user.email}<br/>
-      Message: ${user.message}<br/>
-      Time Spent: ${user.timeSpent} sec<br/>
-      Submitted At: ${user.submittedAt || "N/A"}
+      <strong>${user.name}</strong> - ${user.timeSpent} sec
     `;
     userList.appendChild(li);
   });
